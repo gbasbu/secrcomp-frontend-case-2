@@ -2,6 +2,7 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Sidebar from '../components/sidebar'
 import { Grid } from '@mui/material'
+import Modal from '../components/modal'
 
 import './style.scss'
 
@@ -22,6 +23,8 @@ function Layout() {
           <Outlet />
         </Grid>
       </Grid>
+      {/* Modal */}
+      <Modal />
     </>
   )
 }

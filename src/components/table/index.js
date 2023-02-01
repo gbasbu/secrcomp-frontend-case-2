@@ -23,6 +23,7 @@ function Table({ rows }) {
         <DataGrid
           rows={rows}
           columns={columns}
+          pageSize={6}
           rowsPerPageOptions={[6]}
           disableSelectionOnClick
         />

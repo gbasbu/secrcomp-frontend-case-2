@@ -10,6 +10,8 @@ import Layout from './layout'
 import Context from './context'
 
 export default function App() {
+  const [modalOpen, setModalOpen] = useState(false)
+
   // Create router variable
   const router = createBrowserRouter([
     {
@@ -119,7 +121,9 @@ export default function App() {
   const data = {
     list,
     projects,
-    setProjects
+    setProjects,
+    modalOpen,
+    setModalOpen
   }
 
   return (

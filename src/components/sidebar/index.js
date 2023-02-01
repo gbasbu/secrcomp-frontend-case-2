@@ -3,11 +3,11 @@ import './style.scss'
 import MenuIcon from '@mui/icons-material/Menu'
 import { NavLink } from 'react-router-dom'
 
-import { List, ListItem, ListItemText } from '@mui/material'
+import { List, ListItem, Button, ListItemText } from '@mui/material'
 import ContextProvider from '../../context'
 
 function Sidebar() {
-  const { list } = useContext(ContextProvider)
+  const { list, setModalOpen } = useContext(ContextProvider)
 
   return (
     <div className="sidebar-wrapper">
@@ -27,6 +27,19 @@ function Sidebar() {
             </NavLink>
           </ListItem>
         ))}
+      </List>
+      <List className="sidebar-list-wrapper">
+        <ListItem
+          disablePadding
+          className="sidebar-list-item"
+        >
+          <Button
+            onClick={() => setModalOpen(true)}
+            className="sidebar-list-item-link"
+          >
+            <ListItemText>Create Project</ListItemText>
+          </Button>
+        </ListItem>
       </List>
     </div>
   )
