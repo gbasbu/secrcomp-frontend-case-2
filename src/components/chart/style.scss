@@ -1,0 +1,11 @@
+.chart-wrapper {
+  border: 0.125rem solid black;
+  padding: 3.125rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .chart {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}

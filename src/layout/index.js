@@ -11,13 +11,13 @@ function Layout() {
       <Grid container>
         <Grid
           item
-          xs={2}
+          xs={3}
         >
           <Sidebar />
         </Grid>
         <Grid
           item
-          xs={10}
+          xs={9}
         >
           <Outlet />
         </Grid>

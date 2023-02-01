@@ -3,7 +3,7 @@ import './style.scss'
 import MenuIcon from '@mui/icons-material/Menu'
 import { NavLink } from 'react-router-dom'
 
-import { List, ListItem, ListItemButton, ListItemText } from '@mui/material'
+import { List, ListItem, ListItemText } from '@mui/material'
 import ContextProvider from '../../context'
 
 function Sidebar() {
