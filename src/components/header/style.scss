@@ -1,4 +1,8 @@
 .header-wrapper {
   border-bottom: 2px solid black;
-  padding: 1.5625rem;
+  padding: 0.625rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 1.5625rem;
+  }
 }

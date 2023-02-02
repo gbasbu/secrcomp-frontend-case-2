@@ -76,6 +76,7 @@ export default function Modal() {
           <Button
             variant="contained"
             onClick={handleCreate}
+            color="success"
           >
             Create
           </Button>

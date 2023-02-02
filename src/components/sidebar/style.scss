@@ -1,7 +1,19 @@
 .sidebar-wrapper {
   height: 100vh;
-  border-right: 0.125rem solid black;
-  padding: 1.5625rem;
+  padding: 0.625rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 1.5625rem;
+  }
+
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
 
   .sidebar-list-wrapper {
     margin-top: 5rem;
@@ -10,10 +22,26 @@
       .sidebar-list-item-link {
         text-decoration: none;
         color: black;
+        display: flex;
+        align-items: center;
+
+        .sidebar-list-item-text {
+          margin-top: 5px;
+          display: none;
+
+          @media screen and (min-width: 768px) {
+            display: block;
+          }
+        }
       }
       .sidebar-list-item-link.active {
         color: blue;
         border-bottom: 0.0625rem solid blue;
+      }
+      .sidebar-list-item-link.create-button {
+        position: fixed;
+        bottom: 100px;
+        color: white;
       }
     }
   }

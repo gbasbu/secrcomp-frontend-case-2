@@ -12,12 +12,9 @@ function Chart({ title, data, color }) {
   }
 
   // Chart configration
-  const labels = ['', '']
   const datasets = [
-    {
-      data: [getPercentValue(), projects.length],
-      backgroundColor: ['#003f5c', '#58508d']
-    }
+    { title: title, value: getPercentValue(), color: color },
+    { title: title, value: 100, color: '#6A2135' }
   ]
 
   return (
@@ -27,12 +24,7 @@ function Chart({ title, data, color }) {
         <div style={{ marginTop: '15px' }}>%{getPercentValue()}</div>
       </div>
       <div className="chart">
-        <PieChart
-          data={[
-            { title: title, value: getPercentValue(), color: color },
-            { title: title, value: 100, color: '#6A2135' }
-          ]}
-        />
+        <PieChart data={datasets} />
       </div>
     </div>
   )

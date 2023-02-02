@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import './style.scss'
-import MenuIcon from '@mui/icons-material/Menu'
 import { NavLink } from 'react-router-dom'
 
 import { List, ListItem, Button, ListItemText } from '@mui/material'
@@ -11,7 +10,6 @@ function Sidebar() {
 
   return (
     <div className="sidebar-wrapper">
-      <MenuIcon />
       <List className="sidebar-list-wrapper">
         {list.map((item, index) => (
           <ListItem
@@ -23,7 +21,13 @@ function Sidebar() {
               to={item.link}
               className="sidebar-list-item-link"
             >
-              <ListItemText>{item.text}</ListItemText>
+              {item.icon}
+              <ListItemText
+                style={{ paddingTop: '5px', paddingLeft: '5px' }}
+                className="sidebar-list-item-text"
+              >
+                {item.text}
+              </ListItemText>
             </NavLink>
           </ListItem>
         ))}
@@ -35,9 +39,11 @@ function Sidebar() {
         >
           <Button
             onClick={() => setModalOpen(true)}
-            className="sidebar-list-item-link"
+            className="sidebar-list-item-link create-button"
+            variant="contained"
+            color="success"
           >
-            <ListItemText>Create Project</ListItemText>
+            Create Project
           </Button>
         </ListItem>
       </List>

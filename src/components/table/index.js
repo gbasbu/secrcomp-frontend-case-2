@@ -1,9 +1,9 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { DataGrid } from '@mui/x-data-grid'
 import { Grid } from '@mui/material'
-import ContextProvider from '../../context'
 
 function Table({ rows }) {
+  // Table columns
   const columns = [
     { field: 'name', headerName: 'Project Name', width: 250 },
     { field: 'startDate', headerName: 'Start Date', width: 250 },

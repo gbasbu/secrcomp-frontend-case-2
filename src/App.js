@@ -9,6 +9,9 @@ import CompletedProjects from './pages/completedProjects'
 import Layout from './layout'
 import Context from './context'
 
+// Icons
+import { Home, Folder, FolderCopy, FolderSpecial, FolderOff } from '@mui/icons-material'
+
 export default function App() {
   const [modalOpen, setModalOpen] = useState(false)
 
@@ -47,27 +50,32 @@ export default function App() {
     {
       text: 'Dashboard',
       link: '/',
-      pageTitle: 'Dashboard'
+      pageTitle: 'Dashboard',
+      icon: <Home className="sidebar-list-item-icon" />
     },
     {
       text: 'Projects',
       link: 'allProjects',
-      pageTitle: 'Project List'
+      pageTitle: 'Project List',
+      icon: <Folder className="sidebar-list-item-icon" />
     },
     {
       text: 'Ongoing Projects',
       link: 'ongoingProjects',
-      pageTitle: 'Ongoing Projects'
+      pageTitle: 'Ongoing Projects',
+      icon: <FolderCopy className="sidebar-list-item-icon" />
     },
     {
       text: 'Next Projects',
       link: 'nextProjects',
-      pageTitle: 'Next Projects'
+      pageTitle: 'Next Projects',
+      icon: <FolderSpecial className="sidebar-list-item-icon" />
     },
     {
       text: 'Completed Projects',
       link: 'completedProjects',
-      pageTitle: 'Completed Projects'
+      pageTitle: 'Completed Projects',
+      icon: <FolderOff className="sidebar-list-item-icon" />
     }
   ]
 

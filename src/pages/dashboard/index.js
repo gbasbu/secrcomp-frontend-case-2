@@ -20,7 +20,8 @@ function Dashboard() {
         >
           <Grid
             item
-            xs={6}
+            xs={12}
+            md={6}
           >
             <Chart
               title="Completed Projects"
@@ -30,7 +31,8 @@ function Dashboard() {
           </Grid>
           <Grid
             item
-            xs={6}
+            xs={12}
+            md={6}
           >
             <Chart
               title="Ongoing Projects"
@@ -40,21 +42,22 @@ function Dashboard() {
           </Grid>
           <Grid
             item
-            xs={8}
+            xs={12}
+            md={6}
+            lg={8}
           >
             <Typography>
               What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
               Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
               galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but
-              also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
-              1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long
-              established fact that a...
+              also the leap into...
             </Typography>
           </Grid>
           <Grid
             item
-            xs={4}
+            xs={12}
+            md={6}
+            lg={4}
           >
             <Chart
               title="Next Projects"
